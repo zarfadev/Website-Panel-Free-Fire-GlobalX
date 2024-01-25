@@ -1,0 +1,840 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&amp;display=swap');
+
+:root {
+    color-scheme: dark;
+}
+
+*{
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:black ;
+}
+
+.main{
+    animation: fadeIn ease 1s;
+    transition: background ease .3s;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity:0
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.active{
+    color: #006de1;
+}
+
+.colors_text{
+    color: #006de1;
+}
+
+#particles-js{
+    background: black;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.hamburger{
+    position: fixed;
+    display: none;
+    background-color:transparent;
+    right: 20px;
+    height:30px;
+    width:30px;
+    padding:0;
+    -webkit-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0);
+    -webkit-transition:-webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition:transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    z-index:1002;
+    cursor:pointer;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .is-active{
+    background-color:none;
+}
+
+._layer{
+    background:#fff;
+    margin-bottom:4px;
+    border-radius:2px;
+    width:28px;
+    height:4px;
+    opacity:1;
+    -webkit-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0);
+    -webkit-transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+.hamburger:hover .-top{
+    -webkit-transform:translateY(-100%);
+    -ms-transform:translateY(-100%);
+    transform:translateY(-100%);
+}
+
+.hamburger:hover .-bottom{
+    -webkit-transform:translateY(100%);
+    -ms-transform:translateY(100%);
+    transform:translateY(100%);
+}
+
+.hamburger.is-active .-top{
+    -webkit-transform:translateY(200%) rotate(45deg) !important;
+    -ms-transform:translateY(200%) rotate(45deg) !important;
+    transform:translateY(200%) rotate(45deg) !important;
+}
+
+.hamburger.is-active .-mid{
+    opacity:0;
+}
+
+.hamburger.is-active .-bottom{
+    -webkit-transform:translateY(-200%) rotate(135deg) !important;
+    -ms-transform:translateY(-200%) rotate(135deg) !important;
+    transform:translateY(-200%) rotate(135deg) !important;
+}
+
+.menuppal.is_active{
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.menuppal{
+    background-color: rgb(0 0 0 / 80%);
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transform: translate3d(0px, -100%, 0px);
+    transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+    width: 100%;
+    z-index: 1001;
+}
+.menuppal ul{
+    margin:0;padding:0;
+}
+.menuppal ul li { 
+    list-style: none;
+    text-align:center;
+    font-family: Verdadna, Arial, Helvetica;
+    color: #000;
+    font-size:1.5rem;
+    line-height:3em;
+    height:3em;
+    color:#3690;
+    text-transform:none;
+    font-weight:bold;
+}
+
+.menuppal ul li a{
+    text-decoration:none;
+}
+
+.menuppal ul li a:hover{
+    text-decoration:none;
+    color:#333;
+}
+
+/* Columna */
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.column {
+    flex: 1;
+    max-width: 45%;
+}
+
+/***/
+.main{
+    padding: 0 15px;
+    margin: 20px auto;
+    max-width: 1500px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav img{
+    
+    width: 120px;
+}
+
+.nav ul{
+    align-items: center;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.nav ul li{
+    display: inline-block;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 20px;
+    transition: .2s ease-in-out;
+}
+
+.nav ul li a:hover{
+    color: #006de1;
+}
+
+
+.info{
+    display: flex;
+    flex-direction: row;
+    margin: 100px 0 50px 0;
+}
+
+.info .description{
+    flex: 1;
+    width: 50%;
+    padding: 20px;
+}
+
+.info .description .description__title h1{
+    font-family: 'robototal';
+    font-size: 50px;
+}
+
+.info .description .description__title span{
+    color: #006de1;
+    font-family: 'robototal';
+    font-size: 50px;
+}
+
+.info .description .description__text{
+    font-size: 20px;
+    width: 60%;
+    margin: 15px 0;
+}
+
+.info .description .description__redes a{
+    font-size: 30px;
+    margin: 0 15px 0 0;
+}
+
+.info .description .description__redes i{
+    transition: .2s ease;
+}
+
+.info .description .description__redes i:hover{
+    color: #006de1;
+    transform: scale(1.1);
+}
+
+.info .description .description__redes img{
+    width: 40px;
+}
+
+.info .equipo{
+    flex: 1;
+    width: 50%;
+}
+
+
+.description .description__redes ul{
+    align-items: center;
+    display: flex;
+    list-style: none;
+}
+
+.description .description__redes li{
+    display: inline-block;
+}
+
+.equipo h1{
+    font-size: 35px;
+}
+
+.equipo span{
+    color: #006de1;
+}
+
+.equipo .equipo__discord{
+    margin: 25px 0;
+}
+
+.equipo .equipo__discord .equipo__discord__card{
+    background-color: #3f424056;
+    border-radius: 20px;
+    padding: 40px 0;
+    text-align: center;
+    width: 250px;
+    margin: 0 20px 0 0;
+}
+
+.equipo .equipo__discord .equipo__discord__card .discord__card__icon{
+    font-size: 16px;
+}
+
+.equipo .equipo__discord .equipo__discord__card .discord__card__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.equipo .equipo__discord .equipo__discord__card .discord__card__user i{
+    color: #006de1;
+    font-size: 18px;
+    padding-right: 6px;
+}
+
+.equipo .equipo__discord .equipo__discord__card .discord__card__descrip{
+    padding: 15px 0;
+}
+
+.equipo .equipo__discord .equipo__discord__card .discord__card__image{
+    margin-top: 20px;
+}
+
+.equipo .equipo__discord .equipo__discord__card .discord__card__image img{
+    border-radius: 50%;
+    margin: auto;
+    width: 150px;
+}
+
+.buttons{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.buttons .buttons__title{
+    font-size: 30px;
+}
+
+.buttons .buttons__title h1{
+    font-size: 50px;
+    font-family: 'robototal';
+}
+
+.buttons .buttons__title span{
+    color: #006de1;
+    font-family: 'robototal';
+    font-size: 50px;
+}
+
+.buttons_group{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.buttons__button{
+    width: 33.333%;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+}
+
+.buttons__button a{
+    display: block;
+    background-color: #3f424056;
+    border-radius: 15px;
+    color: #fff;
+    font-family: 'robototal';
+    font-size: 25px;
+    margin: 0 20px;
+    padding: 30px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s ease !important;
+}
+
+
+.buttons__button a:hover{
+    color: #006de1;
+    transition: 1s ease;
+    transform: scale(1.1);
+}
+
+.sellers{
+    margin: 50px 0;
+}
+
+.sellers .title{
+    font-size: 30px;
+    text-align: center;
+}
+
+.sellers .descrip{
+    font-size: 24px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.wsp__group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.wsp__group .wsp__button{
+    margin: 10px auto;
+    width: 35%;
+}
+
+.wsp__group .wsp__button a{
+    align-items: center;
+    background: #00000098;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    font-family: 'robototal';
+    justify-content: center;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px 20px;
+    text-transform: uppercase;
+    transition: 1s ease;
+
+}
+
+.wsp__group .wsp__button a:hover{
+    border-color: #006de1;
+    color: #006de1;
+    transform: scale(1.1);
+}
+
+.wsp__group .wsp__button a i{
+    color: #006de1;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.by{
+    font-size: 14px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+/***pa_pc***/
+
+.despc .title h1{
+    font-family: 'robototal';
+    font-size: 50px;
+}
+
+.despc .title span{
+    color: #006de1;
+    font-family: 'robototal';
+}
+
+.despc .title span{
+    color: #006de1;
+    font-family: 'robototal';
+}
+
+.despc .descrip{
+    padding: 50px 0;
+    margin: auto;
+    width: 70%;
+}
+
+.sellers .forpc{
+    align-items: center;
+    display: flex;
+    padding: 50px 0;
+}
+
+.sellers .forpc .forpc__panel{
+    flex: 1;
+    width: 50%;
+    padding: 20px;
+}
+
+.sellers .forpc .forpc__images{
+    flex: 1;
+    width: 50%;
+    text-align: end;
+}
+
+.forpc__panel{
+    padding: 50px 0;
+}
+
+.forpc h2{
+    font-size: 34px;
+}
+
+.forpc p{
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+.forpc ul{
+    list-style-type: none;
+}
+
+.forpc ul li{
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.forpc ul li i{
+    color: #006de1;
+    margin-right: 10px;
+}
+
+
+.forpc .equipo__images .discord__card__image img{
+    border-radius: 15px;
+    margin: auto;
+    width: 90%;
+}
+
+.forpc__images .card__image--modifiquer{
+    margin: auto;
+    text-align: right;
+}
+
+.forpc__images .card__image--modifiquer img{
+    width: 100%;
+}
+
+.pricepanel .pricepanel__group{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0 50px 0;
+}
+
+.pricepanel .forlife{
+    background-color: #3f424056;
+    border-radius: 15px;
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: 1s ease;
+}
+
+.pricepanel .forlife span{
+    font-family: 'robototal';
+    font-size: 20px;
+    padding: 0 5px;
+}
+
+.pricepanel .forlife h3{
+    color: #006de1;
+    font-family: 'robototal';
+    font-size: 35px;
+}
+
+.pricepanel .forlife p{
+    font-family: 'robototal';
+    font-size: 35px;
+}
+
+.pricepanel .forlife p{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.pricebypass__group{
+    display: flex;
+    justify-content: center;
+}
+
+.pricepanel--modifiquer{
+    display: flex;
+    justify-content: center;
+}
+
+.pricepanel--modifiquer .pricebypass__group{
+    margin: 0 20px;
+}
+
+/* sellers */
+
+.vendedor .title h1{
+    font-family: 'robototal';
+    font-size: 50px ;
+}
+
+.vendedor .title span{
+    color: #006de1;
+    font-family: 'robototal';
+}
+
+/* boton */
+
+.despc .botton_compra{
+    padding-top: 40px ;
+    text-align: center;
+}
+
+.despc .botton_compra a{
+    background: #006de1;
+    border-radius: 10px;
+    color: #000;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 40px;
+    text-decoration: none;
+    transition: 1s ease !important;
+}
+
+.despc .botton_compra a:hover{
+    transform: scale(1.2);
+}
+
+.forpc--modifiquer{
+    flex-direction: row-reverse;
+    padding: 100px 0 !important;
+}
+
+.forpc__panel--modifiquer{
+    text-align: end;
+}
+
+.forpc__panel--modifiquer ul li{
+    justify-content: end;
+}
+
+footer .by span{
+    font-family: 'robototal';
+    font-size: 50px;
+}
+
+footer .by a{
+    color: #006de1;
+    font-family: 'robototal';
+    font-size: 50px;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+footer .by a:hover{
+    color: #fff;
+    transform: scale(1.3);
+}
+
+footer .by i{
+    padding: 0 10px;
+}
+
+.fa--modifiquer{
+    transform: scaleX(-1);
+}
+
+footer .by p{
+    padding-top: 40px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1314px) {
+
+    .info{
+        margin: 50px 0 50px 0;
+    }
+
+    .buttons__button a{
+        font-size: 20px;
+    }
+    
+}
+
+@media (max-width: 1105px) {
+
+    .buttons__button a{
+        font-size: 16px;
+    }
+    
+}
+
+@media (max-width: 999px) {
+
+    .hamburger{
+        display: block;
+    }
+
+    .menuppal ul{
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .nav img{
+        width: 140px;
+    }
+
+    .nav ul li a{
+        font-size: 35px;
+    }
+
+    .link{
+        display: none;
+    }    
+
+    .info{
+        flex-direction: column;
+    }
+    
+    .info .description{
+        width: 100%;
+        padding: 0;
+    }
+
+    .info .equipo{
+        padding: 50px 0;
+        width: 100%;
+    }
+
+    .info .description .description__title h1{
+        text-align: center;
+    }
+
+    .info .description .description__text{
+        margin: 25px auto;
+        text-align: center;
+        width: 80%;
+    }
+
+    .info .description .description__redes{
+        text-align: center;
+    }
+
+    .equipo h1{
+        text-align: center;
+    }
+
+    .equipo .equipo__discord .equipo__discord__card{
+        margin: 0 10px;
+    }
+
+    .buttons_group{
+        width: 100%;
+    }
+
+    .sellers .forpc{
+        flex-direction: column;
+    }
+
+    .forpc ul li {
+        justify-content: center;
+    }
+
+    .sellers .forpc .forpc__panel{
+        width: 100%;
+        padding: 0 0 40px 0;
+    }
+
+    .sellers .forpc__images{
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .sellers .forpc .forpc__panel{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .forpc__images .card__image--modifiquer{
+        text-align: center;
+    }
+
+    .sellers .forpc .equipo__images{
+        width: 80%;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 837px){
+
+    .nav img{
+        width: 120px;
+    }
+
+    .wsp__group .wsp__button{
+        width: 100%;
+    }
+
+    .pricepanel .pricepanel__group{
+        flex-direction: column;
+    }
+
+    .pricepanel .forlife {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    .pricepanel--modifiquer{
+        flex-direction: column;
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 770px) {
+    
+    .info .description .description__text{
+        width: 100%;
+    }
+
+    .buttons_group{
+        flex-direction: column;
+    }
+
+    .buttons__button{
+        margin: 15px 0;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .nav img{
+        width: 100px;
+    }
+
+    .sellers .forpc__images img{
+        width: 100%;
+    }
+
+}

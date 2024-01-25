@@ -1,0 +1,57 @@
+.payment_fond{
+    font-size: 22px;
+    background-color: #3f424056;
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    width: 320px;
+    margin: auto;
+}
+
+select, option, input{
+    color: #000 !important;
+    text-align: center;
+}
+
+select{
+    font-size: 18px;
+    width: 100%;
+    background-color: green;
+    border: none;
+    padding: 0 15px;
+}
+
+select:focus-visible{
+    border: none;
+}
+
+option:focus-visible{
+    border: none;
+}
+
+.mt-4{
+    margin-top: 20px;
+}
+
+table{
+    margin: auto;
+}
+
+.mb-4{
+    padding-bottom: 10px;
+}
+
+/* SUCCESSFUL */
+
+small{
+    font-size: 16px;
+}
+
+.paypal{
+    margin-top: 20px;
+    width: 80%;
+}
+
+.payment_fond img{
+    width: 80%;
+}
