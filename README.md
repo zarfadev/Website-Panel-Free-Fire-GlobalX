@@ -1,4 +1,4 @@
-## Necessary Modifications -> Please star 🌟
+## Necessary Modifications
 
 1. In the path `assets/auth/credentials.php`, add the following information:
    ```php
